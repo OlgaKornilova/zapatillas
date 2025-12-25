@@ -1,0 +1,246 @@
+
+/* ---------------------------------------
+   GLOBAL
+--------------------------------------- */
+.hidden { display: none !important; }
+
+/* ---------------------------------------
+   ADMIN HEADER 
+--------------------------------------- */
+.admin-header {
+  background: var(--color-primary);
+  color: var(--color-text-light);
+  padding: 14px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  margin-bottom: 32px;
+}
+
+.admin-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 0 4px;
+}
+
+.admin-nav h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+.admin-menu {
+  display: flex;
+  gap: 22px;
+}
+
+.admin-menu a {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.admin-menu a:hover {
+  color: var(--color-accent-hover);
+}
+
+.admin-menu a.active {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* ---------------------------------------
+   ADMIN dashboard
+--------------------------------------- */
+.admin-dashboard .admin-links {
+  margin-top: 40px;
+}
+
+.admin-dashboard .admin-card {
+  margin: 40px 0;
+}
+
+.admin-actions {
+    display: flex;
+    align-items: self-start;
+    gap: 30px;
+    font-size: 22px;
+    justify-content: center;
+}
+
+.admin-actions a:hover {
+  transform: scale(1.1);
+}
+
+/* ---------------------------------------
+   GRID LAYOUT
+--------------------------------------- */
+
+.admin-page {
+  margin-bottom: 40px;
+}
+.admin-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.admin-topbar {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.admin-topbar h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.admin-list { grid-column: 1 / 2; }
+.admin-edit { grid-column: 2 / 3; }
+
+
+.product-images-grid {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.product-image-item {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  position: relative;
+  width: 150px;
+  height: auto;
+  overflow: hidden;
+}
+
+.product-image-item .badge-main  {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 1;
+  font-size: 12px;
+  background-color: var(--color-bg-main);
+  border-radius: var(--radius);
+  padding: 5px;
+}
+
+.product-image-item img {
+  width: 150px;
+  height: 100%;
+  object-fit: cover;
+}
+/* ---------------------------------------
+   CARDS
+--------------------------------------- */
+.admin-card {
+  background: var(--color-bg-main);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.admin-card-inner {
+  padding: 24px 26px;
+}
+
+.admin-card h3 {
+  margin-bottom: 18px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+/* ---------------------------------------
+   FORMS
+--------------------------------------- */
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 6px;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-item label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+.form-item input,
+.form-item select,
+.form-item textarea {
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: #fff;
+  transition: 0.2s;
+}
+
+.form-item input:focus,
+.form-item textarea:focus,
+.form-item select:focus {
+  border-color: var(--color-border-hover);
+  outline: none;
+}
+
+.form-buttons-inline {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* ---------------------------------------
+   ALERTS
+--------------------------------------- */
+.admin-message {
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.admin-message.success {
+  background: #E8F9ED;
+  border: 1px solid #C6EBD0;
+  color: #277A42;
+}
+
+.admin-message.error {
+  background: #FCECEC;
+  border: 1px solid #E3B3B3;
+  color: #B13434;
+}
+
+/* ---------------------------------------
+   RESPONSIVE
+--------------------------------------- */
+@media (max-width: 900px) {
+  .admin-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-edit {
+    grid-column: 1 / -1;
+  }
+
+  .admin-topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
